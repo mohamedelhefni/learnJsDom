@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Learn JavaScript Dom</title>
+  </head>
+  <body>
+    <!-- 
+        ================================================
+           * Start Lesson 1 
+        ================================================
+     -->
+    <div class=" lesson1" style="background-color: #40407a;">
+      <div class="container">
+        <header>
+          <h1 class="custom-head">Learn Js Dom</h1>
+        </header>
+        <div class="content">
+          <h2 class="d2">
+            What Is Html Javascript Dom And What Is Dom ?
+          </h2>
+
+          <ul>
+            <li>D ==> Document</li>
+            <li>O ==> Object</li>
+            <li>M ==> Model</li>
+          </ul>
+          <h2 class="d2">What I Can Make With Js Dom ??</h2>
+          <ol>
+            <li>can change all the HTML elements in the page</li>
+            <li>can change all the HTML attributes in the page</li>
+            <li>can change all the CSS styles in the page</li>
+            <li>can remove existing HTML elements and attributes</li>
+            <li>can add new HTML elements and attributes</li>
+            <li>can react to all existing HTML events in the page</li>
+            <li>can create new HTML events in the page</li>
+          </ol>
+          <h2 class="d2">What I Will Learn In This Course ??</h2>
+          <ol>
+            <li>How to change the content of HTML elements</li>
+            <li>How to change the style (CSS) of HTML elements</li>
+            <li>How to react to HTML DOM events</li>
+            <li>How to add and delete HTML elements</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 2
+        ================================================
+     -->
+    <div class="lesson lesson2 p-1">
+      <div class="container">
+        <h1 class="d4 text-center p-2">Lesson 1</h1>
+        <h2 class="d2">Find Elements By [Class, ID, TagName ] With :</h2>
+        <ol>
+          <li>document.getElementById() ==> To Get Element By ID</li>
+          <li>
+            document.getElemetsByTagName() ==> To Get Elements By Tag Name Like
+            [p, div, h1, span ]
+          </li>
+          <li>
+            document.getElementsByClassName() ==> To Get More Than Element By
+            Class Name
+            <span class="warn badge">IE 8 Don't Support It</span>
+          </li>
+          <li>
+            document.QuerySelectorAll()
+            <span class="warn badge">IE 8 Don't Support It</span>
+          </li>
+          <li>document.querySelector()</li>
+          <li>Find Elemets By Object We Will Learn It In Next Lesson</li>
+        </ol>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 3
+        ================================================
+     -->
+    <div class="lesson lesson2">
+      <div class="container">
+        <h1 class="custom-head">Lesson 2</h1>
+        <h2 class="d2">Select With Object Elements In JsDom With</h2>
+        <ol>
+          <li>document.title</li>
+          <li>document.images</li>
+          <li>document.forms</li>
+          <li>document.body</li>
+          <li>document.anchors</li>
+          <li>document.links</li>
+        </ol>
+        <div class="example ">
+          <h2 class="d3">Example :</h2>
+          <div class="ex1 text-center">
+            <h3 class="d2">Get Image With URL</h3>
+            <form>
+              <input type="text" name="url" placeholder="Enter URL" id="url" />
+              <div class="danger w-75 m-auto d-none errMsg ">
+                <h3>Please Enter URL</h3>
+              </div>
+            </form>
+            <button onclick="getImg()" class="bg-dark text-white mt-1 ">
+              Get Img
+            </button>
+            <div class="iamges" id="images"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 4
+        ================================================
+     -->
+    <div class="lesson lesson4">
+      <div class="container">
+        <h1 class="custom-head">Lesson 4</h1>
+        <div class="content w-50 float-left">
+          <h2 class="d2">Get / Set Element Content :</h2>
+          <ol>
+            <li>
+              <p>
+                innerText
+                <span class="badge danger text-white"> ! Not Standerd</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                outerText
+                <span class="badge danger text-white">! Not Standerd </span>
+              </p>
+            </li>
+            <li>
+              innerHTML
+              <span class="badge warn text-white">! Don't Use </span>
+            </li>
+            <li>
+              outerHTML
+              <span class="badge warn text-white">! Don't Use </span>
+            </li>
+            <li>
+              textContent
+              <span class="badge success text-white">Use It</span>
+            </li>
+            <li>Element.Attribute</li>
+            <li>Element.getAttribute('attrName')</li>
+            <li>
+              Element.setAttribute('attrName','attrValue')<br />
+              <span class="badge info">Create Attr if It Wasn't Exist</span>
+            </li>
+            <li>Element.hasAttribute()</li>
+            <li>Element.removeAttribute()</li>
+          </ol>
+        </div>
+        <div class="exam  content w-50 float-left">
+          <h2 class="d2">Examples</h2>
+          <p class="mt-1 lead">
+            With textContent ==> this is &lt;b&gt; Bold &lt;/ b &gt;
+          </p>
+          <p class="mt-1 lead">With innerHTML ==> this is <b>Bold</b></p>
+          <p class="lead mb-1 mt-1 toDanger">
+            Click On The Button To Add Class Danger To Me
+          </p>
+          <button onclick="addDanger()" class="bg-dark text-white">Add</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 5
+        ================================================
+     -->
+    <div class="lesson lesson5">
+      <div class="container">
+        <h1 class="custom-head">Lesson 5</h1>
+        <div class="content w-50 float-left">
+          <h2 class="d2">
+            Class List [items, contains, length]<br />[Add, Remove, Toggle]
+          </h2>
+          <ol>
+            <li>
+              element.classList()
+              <span class="badge warn">IE 9 Don't Support IT</span>
+            </li>
+            <li>element.classList.cotains('className')</li>
+            <li>element.classList.length</li>
+            <li>element.classList.items</li>
+            <li>element.classList.add('className1',..)</li>
+            <li>element.classList.remove('className1',..)</li>
+            <li>element.classList.toggle</li>
+          </ol>
+        </div>
+        <div class="content exam w-50 float-left">
+          <h2 class="d2">Examples:</h2>
+          <div class="ex1">
+            <h2>Click On Badges To Change Classes Of Paragraph</h2>
+            <p class=" text-center d2 mt-1 changed">Changed Paragraph</p>
+            <div class=" buttons mt-2 d-flex">
+              <div class="badge warn mr-1 pointer" onclick="toWarning()">
+                Warning
+              </div>
+              <div class="badge danger mr-1 pointer" onclick="toDang()">
+                Danger
+              </div>
+              <div class="badge success mr-1 pointer" onclick="toSuccess()">
+                success
+              </div>
+              <div class="badge info pointer" onclick="toInfo()">Info</div>
+            </div>
+            <p class="lead mt-1">
+              paragraph changed Class is [<span
+                id="pClasses"
+                class="badge"
+              ></span
+              >]
+            </p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 6
+        ================================================
+     -->
+    <div class="lesson lesson6">
+      <div class="container">
+        <h1 class="custom-head">Lesson 6</h1>
+        <div class="content">
+          <h2 class="d2">Elements Child :</h2>
+          <ol>
+            <li>
+              element.childrenElementCount = element.children.lenght
+              <span class="badge info">Bring Only Elements</span>
+            </li>
+            <li>
+              element.childNodes
+              <span class="info badge"
+                >Bring All Data Like Comments Spaces</span
+              >
+            </li>
+            <li>[ first / last ] Child</li>
+            <li>[first/last] Element Child</li>
+            <li>Parent.appendChild('element(child)')</li>
+            <li>
+              parent.insertBefore('newElement','Positioni[first, last, custom]')
+            </li>
+          </ol>
+        </div>
+        <div class="content expamle todo ">
+          <h2 class="d3">Example :</h2>
+          <h2 class="d3 mt-2 text-center">ToDo List</h2>
+          <div class="contain text-center">
+            <input type="text" id="task" class="w-25  " name="todo" id="" />
+            <div id="errTask" class="danger d-none w-25  m-auto">
+              <p class="p-1">Please type Task</p>
+            </div>
+            <button onclick="addTask()" class="bg-dark text-white mt-1">
+              Add Task
+            </button>
+          </div>
+          <ul id="todo" class="style-none text-center "></ul>
+        </div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 7
+        ================================================
+     -->
+    <div class="lesson lesson7">
+      <div class="container">
+        <h1 class="custom-head">Lessson 7</h1>
+        <div class="content">
+          <h2 class="d2">Node [Name, Value, Type ]</h2>
+          <ol>
+            <li>
+              element.childNodes[index].nodeName
+              <span class="badge info"
+                >Bring The Element Name and If it text Return #text
+              </span>
+            </li>
+            <li>element.childeNodes[index].nodeValue</li>
+            <li>
+              element.childeNodes[index].nodeType
+              <span class="badge info"
+                >return 1 to element 3 to text 8 to comment 2 to attr</span
+              >
+            </li>
+            <li>
+              element.cloneNode(' [true , false ] ')
+              <span class="badge info"
+                >flase => bring Only the main Element And attr , true => bring
+                the elements inside the main one</span
+              >
+            </li>
+            <li>
+              element.parentElement || element.parentNode
+              <span class="badge danger pointer" id="hide"
+                >click on me to hide Parent</span
+              >
+            </li>
+            <li>element.nextElementSibling || elment.nextSibling</li>
+          </ol>
+        </div>
+        <div class="example">
+          <h2 class="d3">Example:</h2>
+          <div class="exmp d-flex justify-content-center align-items-center">
+            <div class="box1 ">
+              <p class="d2 p-1 w-75" id="testP">Test Style From Fields</p>
+              <input
+                type="text"
+                id="color"
+                class="w-25"
+                placeholder="Enter Color"
+              />
+              <input
+                type="text"
+                id="bg-color"
+                class="w-25"
+                placeholder="Enter Background-color"
+              />
+              <button onclick="applyStyle()" id="lol">Apply Changes</button>
+            </div>
+            <div class="btn">
+              <button
+                class="bg-dark text-white mr-1"
+                onclick="clone(); this.onclick = null"
+              >
+                Clone Style
+              </button>
+            </div>
+            <div class="box2">
+              <div class="d2 font-weight-bold p-1" id="cloned"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 8
+        ================================================
+     -->
+    <div class="lesson lesson8">
+      <div class="container">
+        <h1 class="custom-head">Lesson 8</h1>
+        <div class="content w-50 float-left">
+          <h2 class="d2">Element [blur, focus, click]</h2>
+          <ol>
+            <li>element.blur</li>
+            <li>element.focus</li>
+            <li>element.onclick</li>
+            <li>element.addEventListener</li>
+            <li>element.contains</li>
+          </ol>
+        </div>
+        <div class="content  w-50 float-left">
+          <h2 class="d2">Simple Example</h2>
+          <input
+            type="text"
+            class="d-block"
+            name="userName"
+            id="Name"
+            placeholder="UserName"
+          />
+          <button id="getFocus">getFocus</button>
+          <button id="loseFocus">loseFocus</button>
+          <div class="exmp2 mt-1">
+            <h2 class="d2">Eat Monsters</h2>
+            <img
+              src="img/packman.png "
+              class="img-small pointer"
+              id="eat"
+              onclick="eatMonster()"
+            />
+            <img src="img/monster.png" class="img-small monster" />
+            <img src="img/monster.png" class="img-small monster" />
+            <img src="img/monster.png" class="img-small monster" />
+            <img src="img/monster.png" class="img-small monster" />
+            <div class="d-block">
+              <img
+                src="img/powerup.png"
+                class="img-small pointer"
+                onclick="powerUp()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- 
+        ================================================
+           * Start Lesson 9
+        ================================================
+     -->
+    <div class="lesson lesson9">
+      <div class="container">
+        <h1 class="custom-head">Lesson 9</h1>
+        <h2 class="d2">Client, scroll, offset [height, width] :</h2>
+        <ol>
+          <li>
+            element.client[Height, Width]
+            <span class="badge warn">no margin</span>
+            <span class="badge warn">no border</span>
+            <span class="badge info">no scroll</span>
+          </li>
+          <li>
+            element.scroll[height, width]
+            <span class="badge info">Include All Are and Invisible Area</span>
+            <span class="badge warn">no margin</span>
+            <span class="badge warn">no border</span>
+          </li>
+          <li>
+            element.offset[height, width]
+            <span class="badge info">visible Area</span>
+            <span class="badge warn">no margin</span>
+            <span class="badge success">include border</span>
+            <span class="badge success">include border</span>
+            <span class="badge success">include padding</span>
+          </li>
+        </ol>
+      </div>
+      <div class="content example">
+        <h2 class="d2">Example:</h2>
+        <p class="d2">Pop Up Message</p>
+        <div class="area">
+          <div class="popup " id="popup">
+            <p class="danger  p-1">This Is Simple ToolTip</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lesson lesson10">
+      <div class="container">
+        <h1 class="custom-head">Lesson 10</h1>
+        <div class="content">
+          <h2 class="d2">JavaScript With Css :</h2>
+          <ol>
+            <li>
+              element.style.prop = ' Value ';
+              <span class="badge info">To Set Css Value</span>
+            </li>
+            <li>
+              window.getComputedStyle(element).getPropertyValue('css-Prop');
+              <span class="info badge">To Get Css Value </span>
+            </li>
+          </ol>
+        </div>
+        <div class="content example">
+          <h2 class="d2">Example</h2>
+          <h1>You Can See Example In <a href="#testP">Lesson 7</a></h1>
+        </div>
+      </div>
+    </div>
+    <div class="lesson lesson11">
+      <div class="container">
+        <h1 class="custom-head">Lesson 11</h1>
+        <div class="content">
+          <h2 class="d2">Document In JavaScript :</h2>
+          <ol>
+            <li>
+              document.inputEncoding
+              <span class="badge info">to Get the Meta OF the Page</span>
+            </li>
+            <li>
+              document.lastModified
+              <span class="badge info"
+                >To Get Last MOdified Date Like This > </span
+              ><span class="badge ml-1 info" id="date"></span>
+            </li>
+            <li>doucment.URL <span>to Get Link Of The Website</span></li>
+            <li>document.create[ Element, Text, Comment, Attribute ] <span class="badge info">mainElement.setAttributeNode(Attr);</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="lesson lesson12">
+      <div class="container">
+        <h1 class="custom-head">Lesson 12</h1>
+        <div class="content">
+          <h2 class="d2">Events In JavaScript :</h2>
+          <ol>
+            <li>window.onload <span class="badge info">Make Loading Animation while site is loading</span></li>
+            <li>window.onscroll <span class="badge info">Make Scroll Top Button </span></li>
+            <li>window.onresize </li>
+            <li>input.onblur <span class="badge info">make Simple Validation</span></li>
+            <li>input.onfocus</li>
+            <li>element.onsubmmit</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
