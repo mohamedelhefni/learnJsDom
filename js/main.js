@@ -217,3 +217,98 @@ window.onmousemove = function(e) {
 
 // todo: get span with id date and change content to last modified date
 document.getElementById("date").textContent = document.lastModified;
+
+// todo : our simple validation form
+
+var form = document.getElementById("validForm"),
+  userName = form.name,
+  pass = form.pass,
+  btn = document.getElementById("send"),
+  success = document.getElementById("succ"),
+  nameErr = true,
+  passErr = true;
+
+form.onsubmit = function(e) {
+  "use strict";
+  e.preventDefault();
+  success.style.display = "block";
+};
+
+function checkValid() {
+  if (nameErr == true || passErr == true) {
+    btn.setAttribute("disabled", true);
+    btn.style.cursor = "not-allowed";
+  } else {
+    btn.removeAttribute("disabled");
+    btn.style.cursor = "pointer";
+  }
+}
+checkValid();
+
+userName.onblur = function() {
+  checkName();
+};
+
+function checkName() {
+  if (userName.value == "") {
+    userName.nextElementSibling.style.display = "block";
+    nameErr = true;
+  } else {
+    userName.nextElementSibling.style.display = "none";
+    nameErr = false;
+  }
+  checkValid();
+}
+pass.onblur = function() {
+  checkPass();
+};
+
+function checkPass() {
+  if (pass.value == "") {
+    pass.nextElementSibling.style.display = "block";
+    passErr = true;
+  } else {
+    pass.nextElementSibling.style.display = "none";
+    passErr = false;
+
+    if (!hasNumber(pass.value)) {
+      pass.nextElementSibling.nextElementSibling.style.display = "block";
+      passErr = true;
+    } else {
+      pass.nextElementSibling.nextElementSibling.style.display = "none";
+      passErr = false;
+    }
+  }
+
+  checkValid();
+}
+checkValid();
+
+//  ! funciton to check if the pass  contian number
+
+function hasNumber(myString) {
+  return /\d/.test(myString);
+}
+
+// ? simple ads preview
+
+var ads = document.getElementById("ads"), // our form ,
+  adsTitle = ads.title,
+  adsDescription = ads.descripiton,
+  area = document.getElementById("prev-area"),
+  title = document.createElement("p"),
+  descripiton = document.createElement("p");
+
+title.classList.add("title", "d2");
+title.style.textTransform = "uppercase";
+descripiton.classList.add("description");
+area.appendChild(title);
+area.appendChild(descripiton);
+
+adsTitle.onkeyup = function() {
+  title.textContent = adsTitle.value;
+};
+
+adsDescription.onkeyup = function() {
+  descripiton.textContent = adsDescription.value;
+};

@@ -486,17 +486,52 @@
     <div class="lesson lesson12">
       <div class="container">
         <h1 class="custom-head">Lesson 12</h1>
-        <div class="content">
+        <div class="content w-50 float-left ">
           <h2 class="d2">Events In JavaScript :</h2>
           <ol>
+            <li><span class="danger badge">We Can Use e.preventDefault() to prevent the default of element</span></li>
             <li>window.onload <span class="badge info">Make Loading Animation while site is loading</span></li>
             <li>window.onscroll <span class="badge info">Make Scroll Top Button </span></li>
             <li>window.onresize </li>
             <li>input.onblur <span class="badge info">make Simple Validation</span></li>
             <li>input.onfocus</li>
             <li>element.onsubmmit</li>
+            <li>element.onclick</li>
+            <li>element.ondblclick</li>
+            <li>element.onmousemove</li>
+            <li>element.oncontextmenu</li>
+            <li>element.onmouseleave</li>
+            <li>element.onkeyup</li>
+            <li>element.onkeydown</li>
+            <li>element.onkeypress</li>
           </ol>
         </div>
+        <div class="content example w-50 float-left">
+          <h2 class="d3">Examples :</h2>
+          <div class="exmp1 contact mt-1">
+            <h2 class="d2">Simple Validation Form</h2>
+            <form action="" id='validForm'>
+              <p class="success w-75 p-1 mt-1 d-none" id='succ'>Your Form Is Valid </p>
+              <input type="text" name="name" id="name" placeholder="Enter Your Name">
+              <p class="danger  d-none w-75 p-1 ">Enter Valid User </p>
+              <input type="password" name="pass" id="password" placeholder="Enter Your Password">
+              <p class="danger d-none w-75 p-1 empty">Password Can't be empty</p>
+              <p class="danger d-none w-75 p-1 mt-1 mb-1 errPass">Password Must Contain one number at least</p>
+              <input type="submit" id='send' value="Send" class=' btn d-block text-white bg-dark mt-1'>
+            </form>
+          </div>
+          <div class="exmp2 mt-2">
+            <h2 class="d2">ADS View</h2>
+            <form action="" id = 'ads'>
+              <input type="text" name="title"  placeholder="Ads Title">
+              <input type="text" name="descripiton" placeholder="Ads Description">
+            </form>
+            <div class="prev-area" id = 'prev-area'>
+              
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
       </div>
     </div>
     <script src="js/main.js"></script>

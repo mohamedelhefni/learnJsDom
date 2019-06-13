@@ -186,7 +186,8 @@ li {
   padding: 1rem;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   padding: 0.5rem 1rem;
   border: none;
   width: 80%;
@@ -197,7 +198,8 @@ input[type="text"] {
   line-height: 30px;
 }
 
-button {
+button,
+.btn {
   border: none;
   padding: 0.7rem 1rem;
   border-radius: 8px;
@@ -234,4 +236,17 @@ button {
 
 .lesson9 .area:hover .popup {
   display: block;
+}
+
+.lesson12 .prev-area {
+  width: 80%;
+  margin: 30px 0px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  color: #222;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  word-wrap: break-word;
 }
